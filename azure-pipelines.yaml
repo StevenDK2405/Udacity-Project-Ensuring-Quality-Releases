@@ -44,7 +44,7 @@ stages:
           provider: 'azurerm'
           command: 'init'
           workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
-          backendServiceArm: 'sontv13'
+          backendServiceArm: '7377da1b-b84e-4a21-9b39-d02f199771e9'
           backendAzureRmResourceGroupName: 'Azuredevops'
           backendAzureRmStorageAccountName: 'sontv13'
           backendAzureRmContainerName: 'sontv13'
@@ -56,7 +56,7 @@ stages:
           provider: 'azurerm'
           command: 'validate'
           workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
-          backendServiceArm: 'sontv13'
+          backendServiceArm: '7377da1b-b84e-4a21-9b39-d02f199771e9'
        
       - task: TerraformCLI@0
         displayName: Terraform Plan
@@ -64,7 +64,7 @@ stages:
           provider: 'azurerm'
           command: 'plan'
           workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
-          environmentServiceNameAzureRM: 'sontv13'
+          environmentServiceNameAzureRM: '7377da1b-b84e-4a21-9b39-d02f199771e9'
           
       - task: TerraformCLI@0
         displayName: Terraform Apply
@@ -74,7 +74,7 @@ stages:
           commandOptions: |
             -auto-approve
           workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
-          environmentServiceNameAzureRM: 'sontv13'
+          environmentServiceNameAzureRM: '7377da1b-b84e-4a21-9b39-d02f199771e9'
 
 
   - stage: Build
@@ -126,7 +126,7 @@ stages:
             - task: AzureWebApp@1
               displayName: 'Deploy Azure Web App'
               inputs:
-                azureSubscription: 'sontv13'
+                azureSubscription: '7377da1b-b84e-4a21-9b39-d02f199771e9'
                 appName: 'huent15-app-project3-AppService'
                 appType: webApp
                 package: $(Pipeline.Workspace)/drop-fakerestapi/$(Build.BuildId)-fakerestapi.zip
