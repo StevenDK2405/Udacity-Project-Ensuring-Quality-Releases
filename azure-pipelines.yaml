@@ -11,7 +11,7 @@ stages:
       displayName: Terraform
       pool:
         vmImage: 'Ubuntu-20.04'
-        name: sontv
+        name: sontv13
       steps:
       - task: DownloadSecureFile@1
         name: terraform
@@ -82,7 +82,7 @@ stages:
     - job: Build
       pool:
         vmImage: 'Ubuntu-20.04'
-        name: sontv
+        name: sontv13
       steps:
       - task: ArchiveFiles@2
         displayName: Archive FakeRestAPI
@@ -117,7 +117,7 @@ stages:
     - deployment: FakeRestAPI
       pool:
         vmImage: 'Ubuntu-20.04'
-        name: sontv
+        name: sontv13
       environment: 'VM-ENV'
       strategy:
         runOnce:
@@ -200,7 +200,7 @@ stages:
         displayName: Performance testing
         pool:
           vmImage: 'Ubuntu-20.04'
-          name: sontv
+          name: sontv13
         steps:
           - bash: |
               sudo apt-get install openjdk-11-jre-headless -y
@@ -249,7 +249,7 @@ stages:
         displayName: Postman Test
         pool:
             vmImage: 'Ubuntu-20.04'
-            name: sontv
+            name: sontv13
         steps: 
           - task: NodeTool@0
             displayName: Install Node v14.X
