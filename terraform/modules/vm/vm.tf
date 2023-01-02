@@ -10,6 +10,7 @@ resource "azurerm_network_interface" "nic" {
     public_ip_address_id          = "${var.public_ip}"
   }
 }
+
 resource "azurerm_linux_virtual_machine" "vm" {
   name                = "${var.application_type}-${var.resource_type}-internal"
   location            = "${var.location}"
