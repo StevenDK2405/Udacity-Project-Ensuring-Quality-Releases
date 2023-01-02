@@ -2,12 +2,12 @@
 echo "Starting create resources"
 
 RESOURCE_GROUP_NAME="Azuredevops"
-STORAGE_ACCOUNT_NAME="sontv13"
-CONTAINER_NAME="sontv13"
+STORAGE_ACCOUNT_NAME="sontv"
+CONTAINER_NAME="sontv"
 
 # This command is not needed in the Udacity provided Azure account. 
 # Create resource group
-az group create --name $RESOURCE_GROUP_NAME --location eastus
+# az group create --name $RESOURCE_GROUP_NAME --location eastus
 
 # Create storage account
 az storage account create --resource-group $RESOURCE_GROUP_NAME --name $STORAGE_ACCOUNT_NAME --sku Standard_LRS --encryption-services blob

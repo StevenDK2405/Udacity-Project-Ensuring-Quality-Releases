@@ -7,10 +7,10 @@ provider "azurerm" {
 }
 terraform {
   backend "azurerm" {
-    storage_account_name = "sontv13"
-    container_name       = "sontv13"
+    storage_account_name = "sontv"
+    container_name       = "sontv"
     key                  = "terraform.tfstate"
-    access_key           = "W4TBdVZ5CnU0otMaGnBxhlgap8qW3MGxZX33NaBMf8cw+tUYh//JxNbwZwzL70qVdZJgAcmt1eNt+AStKyTPGA=="
+    access_key           = "xz+ynsIG/dhFvR5qAuNDF+qN+Kp4kVhSkLjbbWzd4HmBL7r0pWv1xZP5dJQDwL7RZvTFP0vxyfJc+AStv9rn3A=="
   }
 }
 module "network" {
