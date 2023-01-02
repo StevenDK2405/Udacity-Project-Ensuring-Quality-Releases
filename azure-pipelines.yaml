@@ -257,9 +257,6 @@ stages:
               versionSpec: '14.x'
           - bash: |
               node -v
-              sudo apt-get install npm -y
-              sudo npm install -g npm@latest
-              sudo npm install -g newman
               mkdir -p log/newman
               newman -v
             displayName: Install Newman CLI
