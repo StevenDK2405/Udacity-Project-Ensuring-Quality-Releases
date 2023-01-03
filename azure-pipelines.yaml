@@ -259,7 +259,6 @@ stages:
               node -v
               mkdir -p log/newman
               newman -v
-              ls automatedtesting/postman/
             displayName: Install Newman CLI
           - bash: |
                 newman run automatedtesting/postman/udacity-project3-ReTest.postman_collection.json -e automatedtesting/postman/Env.RegressionTest.postman_environment.json --reporters cli,junit --reporter-junit-export log/newman/RegressionTest.xml --suppress-exit-code
