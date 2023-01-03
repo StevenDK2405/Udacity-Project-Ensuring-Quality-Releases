@@ -88,7 +88,7 @@ On your terminal create a SSH key and also perform a keyscan of your github to g
 
 4. Create the Service Connection in Project Settings > Pipelines > Service Connection
 
-    ![service-connection](screenshots/service-connection.png) <br/>
+    ![img](screenshots/service_connection.png) <br/>
  
 5. Add into Pipelines --> Library --> Secure files these 2 files:
   * The private secure file : **id_rsa key**
